@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bdm-Ex-vZ4">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dream Catcher-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="0c0-zN-Qva">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="68" id="hed-Dz-kYV">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hed-Dz-kYV" id="BMk-fE-J7k">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Suv-Nx-ltP" kind="show" id="YLn-aF-qef"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="llc-pE-aKi"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="23e-Nc-HBI"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="0c0-zN-Qva" secondAttribute="bottom" id="QZg-Nf-Fkf"/>
+                            <constraint firstItem="0c0-zN-Qva" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="Txx-sj-UQ3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0c0-zN-Qva" secondAttribute="trailing" constant="-16" id="VJv-9R-3tZ"/>
+                            <constraint firstItem="0c0-zN-Qva" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="Z1C-NT-sFe"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="0c0-zN-Qva"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="QZg-Nf-Fkf"/>
+                                <exclude reference="Txx-sj-UQ3"/>
+                                <exclude reference="VJv-9R-3tZ"/>
+                                <exclude reference="Z1C-NT-sFe"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="0c0-zN-Qva"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="QZg-Nf-Fkf"/>
+                                <include reference="Txx-sj-UQ3"/>
+                                <include reference="VJv-9R-3tZ"/>
+                                <include reference="Z1C-NT-sFe"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dream Catcher" id="rME-xO-9px">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="1fd-l3-IeY">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="onEditButtonTapped:" destination="vXZ-lx-hvc" id="Czs-f6-bm5"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5g5-aj-eFh">
+                            <color key="tintColor" red="0.76470588235294112" green="0.58823529411764708" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="onAddButtonTapped:" destination="vXZ-lx-hvc" id="RdA-k1-xCM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="0c0-zN-Qva" id="6wt-2o-QXf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1254" y="360"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="9Ia-Us-mCw">
+            <objects>
+                <viewController id="Suv-Nx-ltP" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gy6-6F-Sd3"/>
+                        <viewControllerLayoutGuide type="bottom" id="dHk-nz-PVZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sLg-Jv-vXg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nB6-l7-LDT">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="536"/>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="nB6-l7-LDT" secondAttribute="trailing" constant="-16" id="8b4-Y4-bAc"/>
+                            <constraint firstItem="nB6-l7-LDT" firstAttribute="top" secondItem="gy6-6F-Sd3" secondAttribute="bottom" id="EkR-3K-PAZ"/>
+                            <constraint firstItem="dHk-nz-PVZ" firstAttribute="top" secondItem="nB6-l7-LDT" secondAttribute="bottom" id="GZy-w2-fiv"/>
+                            <constraint firstItem="nB6-l7-LDT" firstAttribute="leading" secondItem="sLg-Jv-vXg" secondAttribute="leadingMargin" constant="-16" id="Naj-hc-S0D"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="nB6-l7-LDT"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="GZy-w2-fiv"/>
+                                <exclude reference="8b4-Y4-bAc"/>
+                                <exclude reference="EkR-3K-PAZ"/>
+                                <exclude reference="Naj-hc-S0D"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="nB6-l7-LDT"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="GZy-w2-fiv"/>
+                                <include reference="8b4-Y4-bAc"/>
+                                <include reference="EkR-3K-PAZ"/>
+                                <include reference="Naj-hc-S0D"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionView" destination="nB6-l7-LDT" id="bDn-lB-XfJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5aQ-Uq-WFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2008.5" y="360"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9D8-4v-d6g">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bdm-Ex-vZ4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yT4-cW-qKt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.11372549019607843" green="0.086274509803921567" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="jNF-Ce-yee"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mua-tD-Rd8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="351" y="360"/>
+        </scene>
+    </scenes>
+</document>
